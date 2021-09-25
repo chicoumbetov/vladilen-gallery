@@ -64,5 +64,9 @@ body {
 }
 
 .hold {
-  background: coral;
+  background: #b5b5b5;
+}
+
+.hide {
+  display: none;
 }
