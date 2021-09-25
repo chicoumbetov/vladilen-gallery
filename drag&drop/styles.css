@@ -70,3 +70,7 @@ body {
 .hide {
   display: none;
 }
+
+.hovered {
+  border-top: 2px solid blueviolet;
+}
