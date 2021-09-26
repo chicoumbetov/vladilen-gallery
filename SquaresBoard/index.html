@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    
+</head>
+<body>
+    <div class="control">
+        <div class="colorpicker">
+            <button style="background-color: red;"></button>
+            <button style="background-color: lime;"></button>
+            <button style="background-color: orange;"></button>
+            <button style="background-color: purple;"></button>
+            <button style="background-color: cyan;"></button>
+            <br>
+            <button class="fa fa-random active-btn" style="width: 50px;height: 50px;"></button>
+            <button class="circle-btn fa fa-circle-notch" style="width: 50px;height: 50px;"></button>
+            <input id="color-circle-delay" type="range" min='500' max='3000'>
+        </div>
+        <hr>
+        <div>
+            <!-- <button class="brush-btn fas fa-paint-brush active-btn"></button>
+            <button class="bombgun-btn fas fa-bomb"></button> -->
+            <button class="fireshow-btn fas fa-bahai"></button>
+            <button class="rocket-btn fa fa-rocket"></button>
+        </div>
+        <hr>
+        <div>
+            <button class="theme-btn fas fa-adjust"></button>
+            <button class="fullsize-btn fas fa-expand-alt"></button>
+            <button class="borders-btn fa fa-border-all active-btn"></button>
+            <div class="resizer">
+                <button class="resize-btn fa fa-crop-alt"></button>
+                <div class="resize-inputs">
+                    <input min="5" max="300" type="number" name="" id="squareSizePX" placeholder="squareSize in px">
+                    <input type="number" min="2" max="300" name="" id="" placeholder="height count squares">
+                    <input type="number" min="2" max="300" name="" id="" placeholder="width count squares">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="board borders"></div>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .colorSettings {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+  }
+  
+  label, h3 {
+    color: wheat;
+  }
+  
+  #clock {
+    border-radius: 20px;
+    border: 20px solid #200000;
+  }
+  
+  .container {
+    background-color: #200000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .seven-segments-display {
+    position: relative;
+    width: 180px;
+    height: 260px;
+  }
+  
+  .seven-segments-display div {
+    position: absolute;
+    background: #200000;
+    box-shadow: 0 0 2px #100000;
+    transition: 2s ease-in;
+  }
+  
+  .seven-segments-display div:hover {
+    transition-duration: 0s;
+  }
+  
+  #segmentA {
+    height: 26px;
+    right: 20px;
+    width: 116px;
+    border-top: 26px solid #300000;
+    border-radius: 20px 20px 5px 5px;
+    z-index: 1;
+  }
+  
+  #segmentB {
+    right: 20px;
+    top: 20px;
+    width: 26px;
+    height: 116px;
+    border-right: 26px solid #300000;
+    transform: rotate(7deg) translateX(5px) translateY(-10px);
+    border-radius: 5px 20px 20px 5px;
+  }
+  
+  #segmentC {
+    right: 20px;
+    bottom: 20px;
+    width: 26px;
+    height: 116px;
+    border-right: 26px solid #300000;
+    transform: rotate(7deg) translateX(-10px);
+    border-radius: 5px 20px 20px 5px;
+  }
+  
+  #segmentD {
+    bottom: 0;
+    left: 20px;
+    width: 116px;
+    height: 26px;
+    border-bottom: 26px solid #300000;
+    border-radius: 5px 5px 20px 20px;
+    transform: translateY(-5px);
+    z-index: 1;
+  }
+  
+  #segmentE {
+    left: 20px;
+    bottom: 20px;
+    width: 26px;
+    height: 116px;
+    border-left: 26px solid #300000;
+    transform: rotate(7deg) translateX(-5px);
+    border-radius: 20px 5px 5px 20px;
+  }
+  
+  #segmentF {
+    left: 20px;
+    top: 20px;
+    width: 26px;
+    height: 116px;
+    border-left: 26px solid #300000;
+    transform: rotate(7deg) translateX(5px) translateY(-10px);
+    border-radius: 20px 5px 5px 20px;
+  }
+  
+  #segmentG {
+    left: 38px;
+    top: 112px;
+    width: 104px;
+    height: 26px;
+    background: #300000;
+    border-radius: 20px;
+  }
+  #segmentG:after {
+    content: '';
+    position: absolute;
+    border-right: 13px solid #300000;
+  }
+  #segmentG:before {
+    content: '';
+    position: absolute;
+    right: 0;
+    border-left: 13px solid #300000;
+  }
+  
+  

@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;700&display=swap');
+
+$black:          #000;
+$white:          #fff;
+$almostWhite:    #CFD8DC;
+$primary:        #F57C00;
+$primaryLight:   #ffa726;
+
+$secondary:      #9142e0;
+$secondaryLight: #c49aef;
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	height: 100vh;
+	margin: 0;
+	overflow: hidden;
+
+	color: $white;
+	font-family: 'Comfortaa', sans-serif;
+	text-align: center;
+
+	background: #1b1c22;
+
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+button {
+	color: inherit;
+
+	border: none;
+
+	cursor: pointer;
+}
+
+.container {
+	position: relative;
+
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.screen {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100vw;
+	height: 100vh;
+
+	transition: margin 0.5s ease-out;
+
+	&.up {
+		margin-top: -100vh;
+	}
+
+	&__headline {
+		margin-bottom: 20px;
+
+		font-size: 64px;
+	}
+
+	&__subheading {
+		margin-bottom: 50px;
+
+		color: $primaryLight;
+	}
+
+	&__start {
+		padding: 10px 30px;
+
+		font-size: 24px;
+
+		background: none;
+		border-radius: 5px;
+
+		transition: 0.5s;
+	}
+
+	&__board {
+		position: relative;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 500px;
+		height: 500px;
+		overflow: hidden;
+
+		background: none;
+		border-radius: 30px;
+
+		transition: .5s;
+	}
+
+	&__title {
+		font-size: 24px;
+		margin-bottom: 30px;
+	}
+
+	&__timer {
+		color: $secondary;
+	}
+}
+
+.time {
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 20px;
+		padding: 0;
+
+		list-style: none;
+	}
+
+	&__item {
+		display: flex;
+
+		color: $white;
+
+		border: 2px solid $almostWhite;
+		border-radius: 5px;
+
+		transition: .2s;
+
+		&:not(:last-child):hover {
+			color: $secondary;
+
+			border: 2px solid $secondary;
+		}
+	}
+
+	&__btn {
+		padding: 0.5rem 1rem;
+
+		font-family: inherit;
+		font-size: 1.5rem;
+
+		background-color: transparent;
+		border-radius: 5px;
+
+		cursor: pointer;
+
+		&:hover {
+			color: $secondary;
+
+			transition: .1s;
+		}
+	}
+
+	&__field {
+		display: flex;
+		padding: 0.5rem 1rem;
+
+		color: $white;
+		font-family: inherit;
+		font-size: 1.5rem;
+
+		background-color: transparent;
+		border: none;
+		border-radius: 5px 0 0 5px;
+
+		cursor: pointer;
+
+		&:focus {
+			outline: none;
+		}
+
+		&::placeholder {
+			font-size: 22px;
+		}
+
+		&-btn {
+			position: relative;
+
+			width: 30px;
+
+			background: $almostWhite;
+			border-radius: 0 2px 2px 0;
+
+			transition: .2s;
+
+			&:before {
+				position: absolute;
+				top: 50%;
+				left: 30%;
+
+				width: 10px;
+				height: 2px;
+				background: #fff;
+				border-radius: 2px;
+
+				content: '';
+			}
+
+			&::after {
+				position: absolute;
+				top: 50%;
+				left: 30%;
+
+				width: 10px;
+				height: 2px;
+
+				transform: rotate(90deg);
+				background: #fff;
+				border-radius: 2px;
+
+				content: '';
+			}
+
+			&:hover {
+				background: $secondary;
+				&:before, &:after {
+					background: $white;
+				}
+			}
+		}
+	}
+}
+
+
+.hide {
+	opacity: 0;
+	visibility: hidden;
+
+	pointer-events: none;
+}
+
+.primary {
+	color: $secondary;
+}
+
+.circle {
+	position: absolute;
+
+	background: $secondaryLight;
+	border-radius: 50%;
+
+	transition: .5s;
+
+	cursor: pointer;
+}
+
+.warn {
+	color: $primary;
+}
+
+.game-over {
+	position: absolute;
+
+	display: flex;
+	flex-direction: column;
+
+	&__message {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 50px;
+
+		color: $primaryLight;
+		font-size: 24px;
+
+		& > span {
+			margin-bottom: 5px;
+
+			color: $primary;
+			font-size: 28px;
+		}
+
+		& p {
+			&:not(:last-child) {
+				margin-bottom: 15px;
+			}
+
+			& > span {
+				color: $secondary;
+			}
+		}
+	}
+
+	&__restart {
+		margin-top: 300px;
+		padding: 10px 30px;
+
+		font-size: 24px;
+		background: none;
+		border-radius: 5px;
+
+		transition: 0.5s;
+	}
+}

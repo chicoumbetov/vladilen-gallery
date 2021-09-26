@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang='ru'>
+	<head>
+		<!-- META -->
+		<meta charset='UTF-8'>
+		<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+
+		<!-- TAB -->
+		<title>D5 / AIM Game</title>
+
+		<!-- CSS -->
+		<link rel='stylesheet' type='text/css' href='assets/main.css'>
+	</head>
+	<body>
+		<section class="game">
+			<div class="game__inner container">
+				<div class="screen">
+
+					<h1 class="screen__headline">Aim Training</h1>
+
+					<h3 class='screen__subheading'>
+						<span class='warn'>Attention!</span>
+						При промахе вы проигрываете
+					</h3>
+
+					<button class='screen__start'>Start game</button>
+
+				</div>
+
+				<div class="screen">
+					<h1 class="screen__headline">Choose time</h1>
+					<ul class="time__list">
+
+						<li class="time__item">
+							<button class="time__btn" data-time='10'>10 sec</button>
+						</li>
+
+						<li class="time__item">
+							<button class="time__btn" data-time='20'>20 sec</button>
+						</li>
+
+						<li class="time__item">
+							<button class="time__btn" data-time='30'>30 sec</button>
+						</li>
+
+						<li class="time__item field">
+							<input class='time__field' type="number" placeholder="Другое" min="40" max="86400">
+							<button class="time__field-btn" type="submit"></button>
+						</li>
+
+					</ul>
+				</div>
+
+				<div class="screen">
+					<h3 class="screen__title">
+						Left
+						<span class="screen__timer">00:00</span>
+					</h3>
+					<div class="screen__board"></div>
+					<div class="game-over hide">
+						<button class='game-over__restart'>Начать заново</button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<script src='assets/main.js'></script>
+	</body>
+</html>
