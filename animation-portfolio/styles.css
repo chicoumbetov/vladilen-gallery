@@ -22,7 +22,7 @@ body {
     align-items: center;
     justify-content: space-between;
     color: #fff;
-    width: 100%;
+    width: 80%;
     z-index: 2;
     padding: 2rem 0;
     position: relative;
@@ -59,7 +59,7 @@ body {
 .navbar-list {
     font-size: 3rem;
     padding-top: 3rem;
-    font-basis: 30rem;
+    flex-basis: 30rem;
     list-style: none;
 }
 
@@ -96,8 +96,8 @@ body {
     flex-direction: column;
     justify-content: center;
     flex: 1;
-    flex-basis: 25rem;
-    padding-right: 25rem;
+    flex-basis: 0;
+    padding-right: 5rem;
     position: relative;
 }
 
@@ -105,6 +105,8 @@ body {
     position: relative;
     flex: 1;
     flex-basis: 25rem;
+    /*overflow: hidden;*/
+    /*border-radius: 10%;*/
 }
 
 .slide-img img {
@@ -193,5 +195,10 @@ body {
     height: 100%;
     left: 0;
     top: 0;
-    background: transparent;
+    /*background: transparent;*/
+    background: #000;
+}
+
+.active {
+    border: 1px solid white;
 }
